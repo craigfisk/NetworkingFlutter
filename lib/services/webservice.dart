@@ -15,6 +15,7 @@ class Webservice {
 
       final response = await http.get(resource.url);
       if(response.statusCode == 200) {
+        
         return resource.parse(response);
       } else {
         throw Exception('Failed to load data!');
